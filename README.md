@@ -105,18 +105,13 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-porta
 
     Optional: Use GNU screen to allow persist access to server even when the SSH connection breaks:
 
-    1. **Install `screen` (if not already installed):**
-        ```sh
-        sudo apt-get install screen
-        ```
-
-    2. **Start a new screen session:**
+    1. **Start a new screen session:**
         ```sh
         screen -S starcoder
         ```
         This starts a new screen session named `starcoder`.
 
-    3. **Run your server inside the screen session:**
+    2. **Run your server inside the screen session:**
         ```sh
         ./llama-server \
             -t 10 \
@@ -135,22 +130,22 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-porta
         ```
     This will keep running inside the screen session.
 
-    4. **Detach from the screen session:**
+    3. **Detach from the screen session:**
         Press `Ctrl-a` followed by `d`. This detaches the screen session and keeps it running in the background.
 
-    5. **Reattach to the screen session (if needed):**
+    4. **Reattach to the screen session (if needed):**
         ```sh
         screen -r starcoder
         ```
         This reattaches you to the `starcoder` session.
 
-    6. **List all screen sessions:**
+    5. **List all screen sessions:**
         ```sh
         screen -ls
         ```
         This shows all the running screen sessions.
 
-    8. **Kill a screen session (when you're done):**
+    6. **Kill a screen session (when you're done):**
         First, reattach to the session:
         ```sh
         screen -r starcoder
