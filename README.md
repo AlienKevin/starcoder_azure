@@ -45,11 +45,10 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-porta
 
 4. Grant permission to the user (otherwise always require sudo for any file operation)
     ```
-    cd /workspace
-    sudo chmod -R -v 777 *
+    sudo chmod -R -v 777 /workspace
     ```
 
-5. Follow the steps in the official doc to install Nvidia driver:
+5. Follow the steps in the official doc to install Nvidia driver. The instance will automatically be restarted during the installation and your SSH connection will break. Reconnect to the instance after the installation finishes.
     https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/hpccompute-gpu-linux#azure-portal
 
 6. Install dependencies
