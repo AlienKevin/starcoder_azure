@@ -40,7 +40,7 @@
     ssh -o ServerAliveInterval=60 azureuser@<your_instance_ip_address>
     ```
 
-3. Follow the official tutorial to attach the data disk created in the setup step. Name the mount point `/workspace` instead of `/datadir` in the tutorial. Stop after finishing the "Verify the disk" section in the tutorial:
+3. Follow the official tutorial to attach the data disk created in the setup step. Name the mount point `/workspace` instead of `/datadir` in the tutorial. Start from the "Prepare a new empty disk" section and stop after finishing the "Verify the disk" section in the tutorial:
 https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-portal
 
 4. Grant permission to the user (otherwise always require sudo for any file operation)
