@@ -113,6 +113,8 @@ https://learn.microsoft.com/en-us/azure/virtual-machines/linux/attach-disk-porta
 
     2. **Run your server inside the screen session:**
         ```sh
+        cd /workspace/llama.cpp
+        
         ./llama-server \
             -t 10 \
             -ngl 64 \
